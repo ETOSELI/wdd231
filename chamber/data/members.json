@@ -1,0 +1,65 @@
+[
+    {
+        "name": "ABC Corp",
+        "address": "123 Main St, Nairobi, Kenya",
+        "phone": "+254 700-111-222",
+        "website": "http://abccorp.com",
+        "image": "abccorp.png",
+        "membershipLevel": 1,
+        "info": "A leading corporation in technology."
+    },
+    {
+        "name": "XYZ Enterprises",
+        "address": "456 Second St, Nairobi, Kenya",
+        "phone": "+254 700-222-333",
+        "website": "http://xyzenterprises.com",
+        "image": "xyzenterprises.png",
+        "membershipLevel": 2,
+        "info": "Specializing in innovative solutions."
+    },
+    {
+        "name": "Tech Solutions",
+        "address": "789 Third St, Nairobi, Kenya",
+        "phone": "+254 700-333-444",
+        "website": "http://techsolutions.com",
+        "image": "techsolutions.png",
+        "membershipLevel": 3,
+        "info": "Expert in IT services and support."
+    },
+    {
+        "name": "Creative Media",
+        "address": "321 Fourth St, Nairobi, Kenya",
+        "phone": "+254 700-444-555",
+        "website": "http://creativemedia.com",
+        "image": "creativemedia.png",
+        "membershipLevel": 1,
+        "info": "Leading media agency in Kenya."
+    },
+    {
+        "name": "Eco Products",
+        "address": "654 Fifth St, Nairobi, Kenya",
+        "phone": "+254 700-555-666",
+        "website": "http://ecoproducts.com",
+        "image": "ecoproducts.png",
+        "membershipLevel": 2,
+        "info": "Sustainable products for everyday use."
+    },
+    {
+        "name": "Finance Hub",
+        "address": "987 Sixth St, Nairobi, Kenya",
+        "phone": "+254 700-666-777",
+        "website": "http://financehub.com",
+        "image": "financehub.jpeg",
+        "membershipLevel": 3,
+        "info": "Expert financial consultancy services."
+    },
+    {
+        "name": "Health & Wellness",
+        "address": "159 Seventh St, Nairobi, Kenya",
+        "phone": "+254 700-777-888",
+        "website": "http://healthandwellness.com",
+        "image": "healthandwellness.jpeg",
+        "membershipLevel": 1,
+        "info": "Promoting health and wellness in the community."
+    }
+]
