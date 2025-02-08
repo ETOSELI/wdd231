@@ -1,0 +1,19 @@
+/* For screens 320px - 640px */
+.images {
+    display: grid;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card img:hover {
+    transform: none; /* Disable hover on mobile */
+}

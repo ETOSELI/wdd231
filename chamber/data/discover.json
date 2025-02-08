@@ -1,0 +1,52 @@
+{
+    "items": [
+        {
+            "name": "Nairobi National Park",
+            "image": "images/nairobi-park.webp",
+            "address": "Langata Road, Nairobi",
+            "description": "Home to a wide variety of wildlife, including lions, giraffes, and rhinos."
+        },
+        {
+            "name": "KICC",
+            "image": "images/kicc.webp",
+            "address": "City Hall Way, Nairobi",
+            "description": "A landmark building and the hub for conferences and events in Kenya."
+        },
+        {
+            "name": "Maasai Mara",
+            "image": "images/maasai.webp",
+            "address": "Narok County, Kenya",
+            "description": "Famous for the annual wildebeest migration and abundant wildlife."
+        },
+        {
+            "name": "Mount Kenya",
+            "image": "images/mount-kenya.webp",
+            "address": "Central Kenya",
+            "description": "The second-highest mountain in Africa, offering stunning views and hiking trails."
+        },
+        {
+            "name": "Lamu Old Town",
+            "image": "images/lamu.webp",
+            "address": "Lamu Island, Kenya",
+            "description": "A UNESCO World Heritage Site with rich Swahili culture and architecture."
+        },
+        {
+            "name": "Diani Beach",
+            "image": "images/diani.webp",
+            "address": "Kwale County, Kenya",
+            "description": "Known for its pristine white sand beaches and crystal-clear waters."
+        },
+        {
+            "name": "Hell's Gate National Park",
+            "image": "images/hells-gate.webp",
+            "address": "Naivasha, Kenya",
+            "description": "Famous for its geothermal activity and scenic landscapes."
+        },
+        {
+            "name": "Lake Nakuru",
+            "image": "images/lake-nakuru.webp",
+            "address": "Nakuru County, Kenya",
+            "description": "Known for its flamingos and diverse birdlife."
+        }
+    ]
+}

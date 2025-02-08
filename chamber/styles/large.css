@@ -1,0 +1,15 @@
+/* For screens 1025px+ */
+.images {
+    display: grid;
+    grid-template-areas:
+        "card1 card2 card3"
+        "card4 card5 card6"
+        "card7 card8 .";
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
