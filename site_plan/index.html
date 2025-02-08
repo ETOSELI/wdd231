@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Garden Wireframe</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wireframe {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        /* Mobile View */
+        .mobile {
+            display: block;
+            width: 375px;
+            border: 2px solid #4CAF50;
+            padding: 10px;
+            margin: 20px auto;
+        }
+
+        /* Desktop View */
+        .desktop {
+            display: none;
+            width: 100%;
+            border: 2px solid #4CAF50;
+            padding: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .mobile { display: none; }
+            .desktop { display: block; }
+        }
+
+        /* Common Elements */
+        .header, .hero, .section, .event, .form-group, .footer {
+            border: 1px dashed #FFC107;
+            margin: 10px 0;
+            padding: 15px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .columns {
+            display: flex;
+            gap: 20px;
+            margin: 15px 0;
+        }
+
+        .col-1 { flex: 1; }
+        .col-2 { flex: 2; }
+
+        .hamburger {
+            width: 30px;
+            height: 3px;
+            background: #4CAF50;
+            margin: 5px 0;
+        }
+
+        .footer-columns {
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wireframe">
+        <!-- Mobile View -->
+        <div class="mobile">
+            <div class="header">
+                <div style="display: flex; justify-content: space-between;">
+                    <h3>🌱 GreenThumb</h3>
+                    <div class="hamburger"></div>
+                    <div class="hamburger"></div>
+                    <div class="hamburger"></div>
+                </div>
+            </div>
+            
+            <div class="hero">
+                <!-- Hero Image Placeholder -->
+                <div style="height: 150px; background: #eee;"></div>
+            </div>
+
+            <div class="section">
+                <h4>Our Mission</h4>
+                <p>Text block about community garden mission...</p>
+            </div>
+
+            <div class="section">
+                <h4>Upcoming Events</h4>
+                <div class="event">Event 1</div>
+                <div class="event">Event 2</div>
+            </div>
+
+            <div class="section">
+                <h4>Quick Contact</h4>
+                <div class="form-group">Name</div>
+                <div class="form-group">Email</div>
+                <div class="form-group">Message</div>
+            </div>
+        </div>
+
+        <!-- Desktop View -->
+        <div class="desktop">
+            <div class="header">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h2>🌱 GreenThumb Community Garden</h2>
+                    <nav class="nav">
+                        <div>Home</div>
+                        <div>About</div>
+                        <div>Events</div>
+                        <div>Contact</div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="hero">
+                <div style="height: 300px; background: #eee; position: relative;">
+                    <div style="position: absolute; bottom: 20px; left: 20px; background: white; padding: 15px;">
+                        <h3>Grow with Your Community</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="col-2">
+                    <div class="section">
+                        <h4>Events Calendar</h4>
+                        <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px;">
+                            <!-- Calendar days placeholder -->
+                            <div style="height: 30px; background: #f0f0f0;"></div>
+                            <!-- Repeat 35 times -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1">
+                    <div class="section">
+                        <h4>Volunteer Signup</h4>
+                        <div class="form-group">Name</div>
+                        <div class="form-group">Email</div>
+                        <div class="form-group">Availability</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="footer-columns">
+                    <div class="col-1">Contact Info</div>
+                    <div class="col-1">Social Links</div>
+                    <div class="col-1">Newsletter</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
