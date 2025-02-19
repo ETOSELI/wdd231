@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join GreenThumb Community Garden - Grow fresh produce, connect with neighbors, and learn sustainable gardening practices">
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="GreenThumb Community Garden">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero-garden.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>GreenThumb Community Garden | Grow Together</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="main-header">
+        <div class="header-content">
+            <a href="/" class="logo-link">
+                <img src="images/logo.jpg" alt="GreenThumb Community Garden Logo" class="logo">
+                <h1>GreenThumb Community Garden</h1>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Open navigation menu">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <picture>
+                <source srcset="images/garden.webp" media="(max-width: 480px)">
+                <img src="images/garden.WEBP" alt="Community garden with diverse group of people planting" 
+                     class="hero-image" loading="lazy">
+            </picture>
+            <div class="hero-overlay">
+                <div class="hero-text">
+                    <h2>Grow Fresh. Grow Together.</h2>
+                    <a href="#volunteer" class="cta-button">Join Our Garden</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-section">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="events-grid" id="events-container">
+                <!-- JavaScript will populate this -->
+            </div>
+        </section>
+
+        <section class="volunteer-section" id="volunteer">
+            <div class="volunteer-content">
+                <h2 class="section-title">Become a Volunteer</h2>
+                <form id="volunteerForm" class="volunteer-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="availability">Weekly Availability</label>
+                        <select id="availability" name="availability" required>
+                            <option value="">Select availability</option>
+                            <option value="1-3">1-3 hours</option>
+                            <option value="4-6">4-6 hours</option>
+                            <option value="7+">7+ hours</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="cta-button">Submit Application</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <address>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Garden Lane</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@greenthumb.org</p>
+                </address>
+            </div>
+
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> GreenThumb Community Garden</p>
+            <p>Created by Eugene Toseli</p>
+            <p>Last modified: <span id="lastModified"></span></p>
+            <a href="attributions.html" class="attribution-link">Resource Attributions</a>
+        </div>
+    </footer>
+
+    <!-- Modal Structure -->
+    <dialog id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <h3>Thank You for Signing Up!</h3>
+            <p>We've received your application and will contact you shortly.</p>
+            <button class="modal-close cta-button">Close</button>
+        </div>
+    </dialog>
+
+    <script type="module" src="scripts/index.js"></script>
+</body>
+</html>

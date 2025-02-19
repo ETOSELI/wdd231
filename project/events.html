@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Garden Events - GreenThumb</title>
+    <style>
+        /* Reuse styles from main CSS and add event-specific styles */
+        .events-header {
+            background: #97bc62;
+            padding: 8rem 2rem 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .event-filter {
+            margin: 2rem auto;
+            max-width: 1200px;
+            padding: 0 2rem;
+        }
+
+        .filter-options {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        .filter-btn.active {
+            background: #2c5f2d;
+            color: white;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .event-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .event-content {
+            padding: 1.5rem;
+        }
+
+        .event-date {
+            color: #2c5f2d;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-time {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .event-location {
+            margin: 1rem 0;
+            color: #444;
+        }
+
+        .register-btn {
+            display: inline-block;
+            background: #2c5f2d;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (same as main page) -->
+    <header>
+        <nav>
+            <div class="logo">GreenThumb</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="events.html" class="active">Events</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Events Header -->
+    <div class="events-header">
+        <h1>Community Garden Events</h1>
+        <p>Join our upcoming gardening activities and workshops</p>
+    </div>
+
+    <!-- Event Filter -->
+    <div class="event-filter">
+        <div class="filter-options">
+            <button class="filter-btn active" data-filter="all">All Events</button>
+            <button class="filter-btn" data-filter="workshop">Workshops</button>
+            <button class="filter-btn" data-filter="volunteer">Volunteer Days</button>
+            <button class="filter-btn" data-filter="harvest">Harvest Festivals</button>
+        </div>
+    </div>
+
+    <!-- Events Calendar -->
+    <div class="calendar">
+        <!-- Event 1 -->
+        <div class="event-card" data-category="workshop">
+            <div class="event-image" style="background-image: url('gardening-workshop.jpg')"></div>
+            <div class="event-content">
+                <div class="event-date">Saturday, March 18, 2025</div>
+                <div class="event-time">10:00 AM - 12:00 PM</div>
+                <h3>Organic Gardening Workshop</h3>
+                <div class="event-location">Main Garden Pavilion</div>
+                <p>Learn sustainable gardening practices and organic pest control methods.</p>
+                <a href="#" class="register-btn">Register Now</a>
+            </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event-card" data-category="volunteer">
+            <div class="event-image" style="background-image: url('volunteer-day.jpg')"></div>
+            <div class="event-content">
+                <div class="event-date">Sunday, March 26, 2025</div>
+                <div class="event-time">8:00 AM - 12:00 PM</div>
+                <h3>Community Planting Day</h3>
+                <div class="event-location">Community Plots</div>
+                <p>Help us plant new seasonal crops and maintain common areas.</p>
+                <a href="#" class="register-btn">Join Volunteer Group</a>
+            </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="event-card" data-category="harvest">
+            <div class="event-image" style="background-image: url('harvest-festival.jpg')"></div>
+            <div class="event-content">
+                <div class="event-date">Saturday, April 1, 2025</div>
+                <div class="event-time">2:00 PM - 6:00 PM</div>
+                <h3>Spring Harvest Festival</h3>
+                <div class="event-location">Main Garden & Amphitheater</div>
+                <p>Celebrate the season's bounty with food, music, and garden tours.</p>
+                <a href="#" class="register-btn">Get Tickets</a>
+            </div>
+        </div>
+
+        <!-- Add more events following the same structure -->
+    </div>
+
+    <!-- Footer (same as main page) -->
+    <footer>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <p>&copy; 2024 GreenThumb Community Garden</p>
+    </footer>
+
+    <script>
+        // Event Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const eventCards = document.querySelectorAll('.event-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+                eventCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Registration Button Handler
+        document.querySelectorAll('.register-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const eventTitle = e.target.closest('.event-card').querySelector('h3').textContent;
+                alert(`Thank you for registering for: ${eventTitle}`);
+            });
+        });
+    </script>
+</body>
+</html>
